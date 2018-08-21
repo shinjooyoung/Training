@@ -107,7 +107,7 @@ public class RunningMachineV1 {
 		/** RunningMachineV1 인스턴스 변수 속도 초기화 */
 		machine.setSpeed(10);
 		
-		/** RunningMachineV1 메소드 호출
+		/** RunningMachineV1 play 메소드 호출
 		 * @param machine RunningMachineV1 클래스 인스턴스
 		 */
 		machine.play(machine);
