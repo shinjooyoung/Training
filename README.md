@@ -1,6 +1,3 @@
-# Java Training
-
-
 ## Java 프로그램의 종류
 
 ### Java 어플리케이션 
