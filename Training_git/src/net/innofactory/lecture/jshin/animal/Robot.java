@@ -2,7 +2,7 @@ package net.innofactory.lecture.jshin.animal;
 
 public class Robot {
 	
-	/** @return batteryCount 건전지 갯수 */
+	/** batteryCount 건전지 갯수 */
 	private int batteryCount;
 	
 	/**

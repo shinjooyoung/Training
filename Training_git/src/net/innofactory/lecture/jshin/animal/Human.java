@@ -2,7 +2,11 @@ package net.innofactory.lecture.jshin.animal;
 
 public class Human extends Animal{
 
+	/** 혈액형 */
 	private String bloodType;
+	
+	/** 이름 */
+	private String name;
 	
 	/**
 	 * 디폴트 생성자
@@ -31,6 +35,20 @@ public class Human extends Animal{
 	 */
 	public void setBloodType(String bloodType) {
 		this.bloodType = bloodType;
+	}
+	
+	/**
+	 * @return name 이름
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name 이름
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
