@@ -17,7 +17,7 @@ public class Dog extends Animal{
 	 */
 	public void bark() {
 		System.out.println("짖는다!");
-	}   
+	}
 	
 	/**
 	 * @return kind 품종
@@ -38,13 +38,13 @@ public class Dog extends Animal{
 	 */
 	public static void main(String[] args) {
 		
-		/** Dog 클래스 인스턴스 */
+		// Dog 클래스 인스턴스 
 		Dog dog = new Dog();
 		
-		/** Dog클래스내 bark 메소드 호출 */
+		// Dog클래스내 bark 메소드 호출 
 		dog.bark();
 		
-		/** Animal클래스 run 메소드 호출 */
+		// Animal클래스 run 메소드 호출 
 		dog.run();
 	}
 

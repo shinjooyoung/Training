@@ -48,32 +48,10 @@ public class RunningMachineV1 {
 	/**
 	 * 런닝머신 작동 메소드
 	 */
-	public void play(RunningMachineV1 machine) {
+	public void play() {
 		
-		/** 탑승자확인 if문 */
-		if(machine.getRunner() == null) {
-			
-			/** 작동불가 메세지 */
-			System.out.println("작동 불가");
-			
-			/** 메소드 종료 */
-			return;
-			
-		} else {
-			
-			/** 탑승자 정보, 속도 메세지 출력 */
-			System.out.println("탑승자 : "+ machine.getRunner().getName() +" 속도 : " + machine.getSpeed());
-			
-			/** 런닝머신 작동 메세지 출력*/
-			System.out.println("런닝머신 작동");
-			
-			/** Animal run 메소드 호출*/
-			machine.getRunner().run();
-			
-			/** RunningMachineV1 stop 메소드 호출*/
-			machine.stop();
-			
-		}
+		// 러닝머신 작동 메세지 출력 
+		System.out.println("런닝머신 작동");
 		
 	}
 	
@@ -82,7 +60,7 @@ public class RunningMachineV1 {
 	 */
 	public void stop() {
 		
-		/** 러닝머신 종료 메세지 출력 */
+		// 러닝머신 종료 메세지 출력 
 		System.out.println("런닝머신 종료");
 	
 	}
@@ -92,25 +70,24 @@ public class RunningMachineV1 {
 	 */
 	public static void main(String[] args) {
 		
-		/** RunningMachineV1 클래스 인스턴스 */
+		// RunningMachineV1 클래스 인스턴스 
 		RunningMachineV1 machine = new RunningMachineV1();
 		
-		/** Human 클래스 인스턴스 */
+		// Human 클래스 인스턴스 
 		Human human = new Human();
 		
-		/** Human 인스턴스 변수 탑승자 이름 초기화 */
-		human.setName("신주용");
-		
-		/** RunningMachineV1  인스턴스 변수 탑승자  초기화 */
+		// RunningMachineV1  인스턴스 변수 탑승자  초기화 
 		machine.setRunner(human);
 		
-		/** RunningMachineV1 인스턴스 변수 속도 초기화 */
+		// RunningMachineV1 인스턴스 변수 속도 초기화 
 		machine.setSpeed(10);
 		
-		/** RunningMachineV1 play 메소드 호출
-		 * @param machine RunningMachineV1 클래스 인스턴스
-		 */
-		machine.play(machine);
+		// RunningMachineV1 play 메소드 호출
+		machine.play();
+		
+		// RunningMachineV1 stop 메소드 호출
+		machine.stop();
+		
 	}
 
 }
