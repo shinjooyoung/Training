@@ -1,8 +1,8 @@
 package net.innofactory.lecture.jshin.animal;
 
-import net.innofactory.lecture.jshin.runnig.Controoler;
+import net.innofactory.lecture.jshin.runnig.Runner;
 
-public class Dog extends Animal implements Controoler {
+public class Dog extends Animal implements Runner {
 	
 	/** 품종*/
 	private String kind;

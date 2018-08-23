@@ -1,8 +1,8 @@
 package net.innofactory.lecture.jshin.animal;
 
-import net.innofactory.lecture.jshin.runnig.Controoler;
+import net.innofactory.lecture.jshin.runnig.Runner;
 
-public class Robot implements Controoler {
+public class Robot implements Runner {
 	
 	/** 건전지 갯수 */
 	private int batteryCount;

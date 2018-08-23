@@ -10,7 +10,7 @@ public class RunningMachineV3 {
 	private int speed;
 	
 	/** 운동하는사람 Controoler 인터페이스 상속받은 class만 탑승가능  */
-	private Controoler runner;
+	private Runner runner;
 	
 	/**
 	 * 디폴트 생성자
@@ -36,14 +36,14 @@ public class RunningMachineV3 {
 	/**
 	 * @return runner 운동하는사람
 	 */
-	public Controoler getRunner() {
+	public Runner getRunner() {
 		return runner;
 	}
 
 	/**
 	 * @param runner 운동하는사람
 	 */
-	public void setRunner(Controoler runner) {
+	public void setRunner(Runner runner) {
 		this.runner = runner;
 	}
 	

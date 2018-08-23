@@ -1,8 +1,8 @@
 package net.innofactory.lecture.jshin.animal;
 
-import net.innofactory.lecture.jshin.runnig.Controoler;
+import net.innofactory.lecture.jshin.runnig.Runner;
 
-public class Human extends Animal implements Controoler {
+public class Human extends Animal implements Runner {
 
 	/** 혈액형 */
 	private String bloodType;
