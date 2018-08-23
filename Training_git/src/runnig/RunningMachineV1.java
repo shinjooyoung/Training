@@ -1,6 +1,6 @@
-package net.innofactory.lecture.jshin.runnig;
+package runnig;
 
-import net.innofactory.lecture.jshin.animal.Human;
+import animal.Human;
 
 public class RunningMachineV1 {
 	

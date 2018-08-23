@@ -1,4 +1,4 @@
-package net.innofactory.lecture.jshin.animal;
+package animal;
 
 public class Animal {
 	

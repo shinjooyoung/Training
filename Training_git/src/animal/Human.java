@@ -1,6 +1,6 @@
-package net.innofactory.lecture.jshin.animal;
+package animal;
 
-import net.innofactory.lecture.jshin.runnig.Runner;
+import runnig.Runner;
 
 public class Human extends Animal implements Runner {
 

@@ -1,21 +1,21 @@
-package net.innofactory.lecture.jshin.runnig;
+package runnig;
 
-import net.innofactory.lecture.jshin.animal.Dog;
-import net.innofactory.lecture.jshin.animal.Human;
-import net.innofactory.lecture.jshin.animal.Robot;
+import animal.Animal;
+import animal.Dog;
+import animal.Human;
 
-public class RunningMachineV3 {
+public class RunningMachineV2 {
 	
 	/** 속도 */
 	private int speed;
 	
-	/** 운동하는사람 Controoler 인터페이스 상속받은 class만 탑승가능  */
-	private Runner runner;
+	/** 운동하는사람 Animal 상속받은 class 모두 탑승가능  */
+	private Animal runner;
 	
 	/**
 	 * 디폴트 생성자
 	 */
-	public RunningMachineV3() {
+	public RunningMachineV2() {
 		super();
 	}
 	
@@ -36,14 +36,14 @@ public class RunningMachineV3 {
 	/**
 	 * @return runner 운동하는사람
 	 */
-	public Runner getRunner() {
+	public Animal getRunner() {
 		return runner;
 	}
 
 	/**
 	 * @param runner 운동하는사람
 	 */
-	public void setRunner(Runner runner) {
+	public void setRunner(Animal runner) {
 		this.runner = runner;
 	}
 	
@@ -75,7 +75,7 @@ public class RunningMachineV3 {
 		//사람이 런닝머신을 탔을때
 		
 		// RunningMachineV2 클래스 인스턴스 
-		RunningMachineV3 machine = new RunningMachineV3();
+		RunningMachineV2 machine = new RunningMachineV2();
 		
 		// Human 클래스 인스턴스 
 		Human human = new Human();
@@ -95,7 +95,6 @@ public class RunningMachineV3 {
 		// RunningMachineV1 stop 메소드 호출
 		machine.stop();
 		
-		//------------------------------------------------------------
 		
 		//강아지가 런닝머신을 탔을때
 		
@@ -112,33 +111,10 @@ public class RunningMachineV3 {
 		machine.play();
 		
 		// Animal run 메소드 호출
-		dog.run();
+		human.run();
 		
 		// RunningMachineV1 stop 메소드 호출
 		machine.stop();
-		
-		//------------------------------------------------------------
-		
-		//로봇이 런닝머신을 탔을때
-		
-		// 로봇 클래스 인스턴스 
-		Robot robot = new Robot();
-		
-		// RunningMachineV1  인스턴스 변수 탑승자  초기화 
-		machine.setRunner(robot);
-		
-		// RunningMachineV1 인스턴스 변수 속도 초기화 
-		machine.setSpeed(30);
-		
-		// RunningMachineV1 play 메소드 호출
-		machine.play();
-		
-		// Animal run 메소드 호출
-		robot.run();
-		
-		// RunningMachineV1 stop 메소드 호출
-		machine.stop();
-				
 		
 	}
 

@@ -1,4 +1,4 @@
-package net.innofactory.lecture.jshin.runnig;
+package runnig;
 
 public interface Runner {
 
