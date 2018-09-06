@@ -139,3 +139,56 @@ List, Set, Map 의 구현클래스는 어떤것들이 있는지 각각 나열하
 - TreeMap - 이진트리 형태로 키(Key)와 값(Value)의 쌍으로 이루어진 데이터를 저장합니다. 정렬된 순서로 키(Key)와 값(Value) 쌍을 저장하므로 검색이 빠르지만 저장시 정렬을 하기때문에 시간이 오래 걸립니다.
 
 - Hashtable - 해시함수를 사용해서 키(Key)를 해시값(HashValue)으로 매핑하고 해시값(HashValue)을 주소 삼아 데이터의 값(Value)을 키(Key)와 함께 저장하는 자료구조를 말합니다.
+
+
+
+## HTTP
+
+
+
+### HTTP와 FTP
+
+
+#### HTTP
+
+웹서버와 클라이언트간에 정보를 교환하기 위한 통신 규약(네트워크 80번 포트)입니다.
+HTTP Request로 요청을하고 HTTP Response로 응답을 받습니다.
+
+#### FTP
+
+인터넷을 통한 파일 송수신 서비스로 http로 접속되는 WWW보다 빠른 속도로 데이터를 주고 받을 수 있습니다.
+서버와 클라이언트간에는 2개의 연결이 생깁니다. 데이터 전송을 위해 신호를 주고받기 위한 포트(네트워크 21번 포트)와 실제로 데이터 전송에 사용되는 포트(네트워크 20번 포트) 입니다.
+
+
+
+### HTTP 메소드 종류
+
+- GET - URI(URL) 형식으로 리소스를 요청
+- HEAD - Get방식과 유사하며 헤더 정보만을 보냄(웹 서버 정보, 다운 여부 점검 등)
+- POST - 클라이언트에서 서버로 정보를 보낼때 사용
+- PUT - POST처럼 정보를 보내는건 동일하나 서버의 데이터 갱신위주로 사용됨
+- DELET - 웹서버의 리소스를 제거할때 사용 
+- OPTIONS - 웹서버에서  지원되는 메소드 종류를 확인 가능
+- TRACE - 요청 리소스가 수신되는 경로를 보여줌
+- CONNECT - 직접 통신할 수 없을떄 중계기로서 대리로 통신을 수행하는 기능, 프록시서버와 동일
+
+
+### HTTP 컨텐트 타입
+
+#### * 전송하는 데이터의 형식으로 mime type 형식으로 표현됨
+
+#### * mime type - content type을 표현하는 방식으로 8가지 종류가 존재 application, audio, image, message, model, multipart, text, video
+
+#### 자주쓰이는 content type
+
+- text/html - HTML 문서
+- text/css	- HTML CSS 스타일시트
+- text/plain - HTML 텍스트 파일
+- application/msword - 마이크로소프트 워드 문서
+- application/pdf - Acrobat(.pdf) 파일
+- application/vnd.ms-excel - 마이크로소프트 엑셀 스프레드시트
+- application/vnd.ms-powerpoint - 마이크로소프트 파워포인트 프리젠테이션
+- image/gif - GIF 이미지
+- image/jpeg - JPEG 이미지
+- video/mpeg - MPEG 동영상 클립
+
