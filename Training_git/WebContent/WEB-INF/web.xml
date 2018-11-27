@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>lecture</servlet-name>
+  	<servlet-class>servlet.MultiplicationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>lecture</servlet-name>
+  	<url-pattern>/lecture/servlet/MultiplicationServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

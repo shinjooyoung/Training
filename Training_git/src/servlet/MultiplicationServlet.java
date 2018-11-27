@@ -34,6 +34,8 @@ public class MultiplicationServlet extends HttpServlet {
        
         
         String number = request.getParameter("number");
+        
+        System.out.println(number);
 
         //출력장치 확보
         PrintWriter out = response.getWriter();
