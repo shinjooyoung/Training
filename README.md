@@ -192,3 +192,49 @@ HTTP Request로 요청을하고 HTTP Response로 응답을 받습니다.
 - image/jpeg - JPEG 이미지
 - video/mpeg - MPEG 동영상 클립
 
+
+### Servlet
+
+#### Servlet main() 메쏘드 없이 동작하는 이유
+
+servlet은 servlet컨테이너로 관리가 됩니다.  servlet을 실행하고 관리하는 역활을 해주기 때문에 url요청이 오면 servlet컨테이너를 통해서 service() 호출되어 동작합니다. 그래서 main() 메쏘드가 없이도 동작이 가능합니다. 
+
+#### Servlet 퀴즈
+
+##### Servlet은 main() 메쏘드가 없는데도 동작이 됩니다. 말이안되죠? main() 메쏘드를 가진 클래스는 어디에 있을까요?
+응답객체를 만들어 주는 주체는 servlet컨테이너 입니다 서블릿에 대한 URL요청이 오면 컨테이너가 HttpServletResponse와 HttpServletRequest 객체를 생성합니다. 그 후 URL을 분석 후 어떤 서블릿을 요청한지 확인을 합니다. 그다음에 서블릿 스레드를 생성해 Request, Response 참조를 넘깁니다.
+
+##### 응답객체의 writer 속성은 빨대라고 생각할 수 있습니다. System.out 빨대의 끝단은 콘솔(커멘드창)입니다. 응답객체 writer의 끝단은 어디일까요?
+
+응답객체의 writer 속성이 빨대라면 빨대 끝단은 최종적으로 나오는 웹 브라우저 화면입니다
+
+
+### JSP 로부터 만들어진 Servlet 소스 분석
+#### JSP의 page 지시자나 작성한 HTML 들이 어떤 Java 소스로 변환되었는지 분석하고 그 내용을 간락히 적으십시요.
+JSP의 page지시자는 response객체의 setContentType 메소드로 contentType을 설정, HTML로 작성한 코드들은 jsp객체들이 자동으로 생성(request, response, pageContext, session, application, out, config , page ) 되고 out 출력스트림을 통해 write 함수를 호출해서 응답할 HTML 텍스트를 전달하는 구조로 되어있음
+
+- request : 요청을 처리하는 객체
+
+- response : 응답을 처리하는객체
+
+- pageContext : jsp페이지와 관련 컨텍스트 정보를 담고 있는객체
+
+- session : 세션관리를 위한 객체
+
+- application : 컨텍스트의 범위의 공유되는 데이터를 담고 있는 객체 
+
+- out : 브라우져로의 출력 스트림을 담당하는 객체
+
+- config : 서블릿이 초기화 하는 동안 참조해야 할 정보를전달해주는 객체
+
+- page : this, 서블릿 자신의 객체
+
+* 컨텍스트 : 같은 웹 응용 프로그램에 소속된 서블릿과 JSP 프로그램들은 실행환경을 서로 공유하며 이러한 환경을 컨텍스트라고함, 이런 컨텍스트를 통해 서블릿과 JSP는 데이터 공유가 가능함
+
+
+#### JSP 실행 과정의 이해
+
+##### 브라우저 주소창에 url 요청 후 브라우저에 응답이 보여질때까지 브라우저와 Tomcat 이 수행하는 작업을 순서대로 기술하십시요. 
+
+브라우저는 Tomcat 에게 http Get또는 Post 방식으로 요청을 보내면 해당 객체를 서블릿 컨테이너에서 찾고 없을경우 JSP 파일을 서블릿 파일로 변환, 서블릿 파일을 클래스 파일로 컴파일 하여 서블릿 컨테이너에 로딩하여 브라우저로 응답함
+
