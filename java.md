@@ -9,7 +9,7 @@
   - 입력값에 따라 수정이 가능
   - 해당 객체에 참조가 없는경우 GC의해 해제된다.
 
-##지역변수
+## 지역변수
 - 선언한 위치가 메소드나 생성자 위치
 - 메소드 내에서만 사용이 가능하며 메소드가 종료되면 자동으로 소멸된다.
 
@@ -47,7 +47,7 @@
 - 프로세스가 할당받은 자원을 이용하는 실행단위
 
 
-##osi(Open Systems InterConnection Reference Model) 7계층
+## osi(Open Systems InterConnection Reference Model) 7계층
 
 - 물리 
   - 통신 장치들 간에 데이터를 전송하는 물리적 방법들을 정의한 계층, 전기 신호를 주고 받는 방법을 정의
